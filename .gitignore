@@ -87,16 +87,14 @@ target/
 
 # Mypy cache
 .mypy_cache/
-notebooks/Mojo_cleaning.ipynb
-notebooks/Mojo_cleaning.ipynb
+
 notebooks/Omdb1.ipynb
 notebooks/Untitled.ipynb
-notebooks/Omdb1.ipynb
-notebooks/Untitled1.ipynb
 notebooks/Untitled2.ipynb
-notebooks/Mojo_cleaning.ipynb
-notebooks/Omdb1.ipynb
-notebooks/Mojo_cleaning.ipynb
-notebooks/Omdb1.ipynb
-notebooks/Mojo_cleaning.ipynb
-notebooks/Omdb1.ipynb
+notebooks/merge_one_to_one.ipynb
+notebooks/mojo_clean1.ipynb
+noteboook/mojo_domestic.ipynb
+noteboook/mojo_worldwide.ipynb
+notebook/omdb2.ipynb
+notebook/rotten_2019.ipynb
+
