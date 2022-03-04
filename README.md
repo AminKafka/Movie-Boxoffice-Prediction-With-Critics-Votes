@@ -78,3 +78,19 @@ This algorithm is clearly performe better in comapre to others. By using the Gri
 By looking at the featuers importance, We can see that my prediction about the audience being the most important one was true. Also as I assume the Rotten Tomatto criticts vote number has the most weight amounf the critics vote information.
 
 ![](./Image/features.png)
+
+## 5. Modeling
+
+[Modeling](https://github.com/AminKafka/Movie_boxoffice_reviews/blob/main/notebooks/Modeling.ipynb)
+
+I chose the  Random Forest Regressor with the hyperparameters that I calculated in previous step, as my final model. For the goal of the project I traine this model only on critics early vote information. Rotten Tomatto vote number still plays the most important role in this model and has more than 60% weight of the model performance. Each movie that recieve more vote on this website from critics, regardless of what the actual vote is, will performce better in box-office according to this model.
+
+![](./Image/cri_model.png)
+
+To see how this model performe, I calculate a metric by using the absulote error of the prediction and the actual box-office of each film and called it prediction accuracy. This metric range between 5% to 45% and it is almost same for diffrent class of the film. So by using the early vote of the critics I can predict the box-office of the film by 5 to 45 percent acuuracy. This number is low mostly beacuse of the nature of the box-office as a large range discontinious values.
+
+![](./Image/perdiction_acc.png)
+
+But by using this model I can perdict which class movie will end up be. Specially for the Indie class, by looking at the critics early vote I can assume with good certainty that the movie is going to end up in this class, or be a average/Blockbuster movie.
+
+![](./Image/class_acc.png)
