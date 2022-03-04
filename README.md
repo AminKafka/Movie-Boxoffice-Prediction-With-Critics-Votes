@@ -58,3 +58,23 @@ Rotten tomatto critics vote number scatter plot has even more linearity in compa
 Also just by taking a glance at the audience number, it is obvious that they have more coorolation with the box-office. Audience vote after the release of the movie and as the movie raise its popularity amoung the audience, they tends to vote higher. So I can also asuume here that the model only consist of the critics votes will performce worse than the model that used combination of audience and critics vote.
 
 ![](./Image/audience.png)
+
+## 4. Algorithms & Machine Learning
+
+[Pre-processing and Model Selection](https://github.com/AminKafka/Movie_boxoffice_reviews/blob/main/notebooks/Pre-processing.ipynb)
+
+I chose to work with the Python [scikit-learn](https://scikit-learn.org/stable/) for training my recommendation model. I tested all four different algorithms on the full votes dataset, and Random Forest Regressor algorithm performed the best. It should be noted that this algorithm, although the most accurate is also the most computationally expensive, and that should be taken into account if this were to go into production.
+
+![](./Image/algorithms.png)
+
+>***NOTE:** I choose MAE as the accuracy metric over RMSE because it's more rebust against the outliner. Box-office data that is the dependant value, has lots of Blockbuster movie with the values over billion dollars as the outliber and MAE performe better as a metric in this case. The smaller the MAE, the more accurate the prediction.*
+
+**WINNER: Random Forest Regressor**
+
+This algorithm is clearly performe better in comapre to others. By using the GridSearch I chose the hyperparametes for best performance. 
+
+![](./Image/gridsearch.png)
+
+By looking at the featuers importance, We can see that my prediction about the audience being the most important one was true. Also as I assume the Rotten Tomatto criticts vote number has the most weight amounf the critics vote information.
+
+![](./Image/features.png)
