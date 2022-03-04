@@ -35,8 +35,26 @@ Next I will attempt to make a separate model, only using the critic early votes 
 * **Movie box-office** *
 
 
-![](./Image/box-office hist.png)
+![](./Image/box-office_hist.png)
 
 It is clear that the box-office variable has a long range between 10,000 to 2,000,000,000 and visibily it is not a continious value. That makes the prediction task which is based on the regression model, very hard and probably not acuurate. The dependant value in regression model needs to be a continious number in order to train the model for all the possible senario and therefore have a accurate predicition. So I can already imagine that model won't create a very accurate box-office prediction.
 
 I decide to classify the movie box-office in three diffrent class. Blockbuster, average and Indie label created for each movie based on its box-office. This way beside getting a prediction for box-office, I can use my regression model, to predict which class movie will end up in. Based on early critic vote, the movie going to be a Blockbuster or average movie, or its going to sells less than 25 millions and classify as a Indie movie.
+
+![](./Image/class.png)
+
+* **predictor values:Votes Data**
+
+As the only predictor values, votes data consist of vote average and number of vote that gathered by the website. It is 18 columns gathered from three diffrent website, Metacritics, Rotten Tomatto and IMDB. For the finial goal of this project I only use the critics early vote columns from MEtacritic and Rotten Tomatto. All the 18 columns in other hand will used to see the general performance of a model consists of the vote information.
+
+![](./Image/met_cri.png)
+
+For the Metacritics it is clear that vote number show more linear coorolation with the box-office data. All three diffrent class also have a balanced distribution both in vote average and vote number.
+
+![](./Image/tom_cri.png)
+
+Rotten tomatto critics vote number scatter plot has even more linearity in compare to Metacritics and I can assume that this columns will t have the most importance in prediction model.
+
+Also just by taking a glance at the audience number, it is obvious that they have more coorolation with the box-office. Audience vote after the release of the movie and as the movie raise its popularity amoung the audience, they tends to vote higher. So I can also asuume here that the model only consist of the critics votes will performce worse than the model that used combination of audience and critics vote.
+
+![](./Image/audience.png)
