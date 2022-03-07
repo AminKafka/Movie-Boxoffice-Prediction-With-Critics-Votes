@@ -94,3 +94,34 @@ To see how this model performe, I calculate a metric by using the absolute error
 By using this model I can predict which class the movie will end up in. Especially for the Indie class, by looking at the critics early vote I can assume with good certainty that the movie is going to end up in this class, or be a average/Blockbuster movie.
 
 ![](./Image/class_acc.png)
+
+## 6. Getting the prediction for 2021 movie
+
+For further investigation and see how this model works with the more recent data, I will pick three movies, one from each class and see how the early critics vote can predicts the box-office of that movie and will the model be able to pick a right class for the movie or not.
+
+* **Dune**
+
+![](./Image/dune.jpg)
+
+Using the early critics votes of this movie, my model *predicts that Dune will collect 966 Million dollars* at box-office. This movie *in reality ends up with only 400 million dollars*. Because the critics love this film and vote more for it, we saw higher than what the film actually made in box-office. While the MAE is large but the model perdict currectly that Dune will be a Blockbuster movie.
+
+* **House of Gucci**
+
+
+![](./Image/gucci.jpg)
+
+Despite the fact that this movie directed by Ridly Scott and has a very well-known and popular stars such as Al Pacino and Lady GaGa, it only gahterd 100 million dollars in box-office. Peopel simply don't like it, or because of pandamic restriction people still hesitated to go back to teathers. But critics vote high for this film, and that is why my model predict 450 million dollars box-office for this film. Not only it is not close to the real number. it also perdict the wrong class for the film, only because critics like it more than audience.
+
+* **Bergman Island**
+
+![](./Image/bergman.jpg)
+
+This is the movie that adored by critics in festivals and on average got more than 90% possitive vote. But outside of the festiveals, did not get enough attention and that is why it does not have a high number of votes even among the critics. That is why my model predict that this movie will only sells 2 million dollars in box-office and in reality Bergman Island ends up with only 700 thousend dollars. So my model currectly perdict the class and also guess very close number for the real box-office.
+
+## 7. Future Improvements
+
+ * Predicting a box-office for a movie is hard task. While early critcs vote showed to be a decent factor in this prediction, but it is not enough for having a very accurate prediction. If I manage to gather more information like, how many time people google the name of the film in first week of movie release, or how many time people tweet about the film or even know the advertisment budget of the movie, I definitly can make a more accurate model for box-office prediction.
+
+ * Beside these three website there are others that critics submite thier vote there. Although these are the most popular one but more data will help the perdiciton for sure.
+
+ * The data I gathered was for years between 2010 and 2019 and only have 3000 rows. If I be able to gathered more data for all years avalable on those website and be able to merge them currectly together, my model would have a better performance.
